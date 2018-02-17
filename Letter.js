@@ -4,7 +4,7 @@ var Letter = function(char){
   this.char = char;
   this.guessed = false;
   // check if the letter has been guessed - if not, display a "_", if it has, display the char as a string
-  this.displayLetter = function(){
+  Letter.prototype.displayLetter = function(guessed){
     var display = '';
     if(!this.guessed){
       display = '_';
@@ -24,7 +24,8 @@ var Letter = function(char){
   };
 };
 
-// var testLetter = new Letter("W");
-//
-// testLetter.checkLetter("w");
+var testLetter = new Letter("w");
+console.log(testLetter);
+
+testLetter.checkLetter('s');
 module.exports = Letter;
