@@ -24,7 +24,7 @@ var Letter = function(char){
   };
 };
 
-var testLetter = new Letter("W");
-
-testLetter.checkLetter("w");
+// var testLetter = new Letter("W");
+//
+// testLetter.checkLetter("w");
 module.exports = Letter;
