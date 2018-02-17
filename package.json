@@ -1,0 +1,24 @@
+{
+  "name": "cli-hangman",
+  "version": "1.0.0",
+  "description": "A CLI hangman game focusing on javascript constructors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrrrg/cli-hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrrrg/cli-hangman/issues"
+  },
+  "homepage": "https://github.com/wrrrg/cli-hangman#readme",
+  "dependencies": {
+    "inquirer": "^5.1.0",
+    "prompt": "^1.0.0"
+  }
+}
