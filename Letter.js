@@ -11,7 +11,7 @@ var Letter = function(char){
     var char = this.char.toString();
 
     if(!this.guessed){
-      return '_';
+      return '_ ';
     } else {
       return char
     }
@@ -19,22 +19,19 @@ var Letter = function(char){
 
   //  checks input vs. the char. Saving this as a separate function for now.
 
-  Letter.prototype.checkLetter = function(input, letterObj){
-    if(input.toUpperCase() === letterObj.char.toUpperCase()){
-      return letterObj.guessed = true;
-    } else {
-      console.log("Not the right answer!");
-      
+  Letter.prototype.checkLetter = function(input){
+    if(input.toUpperCase() === this.char.toUpperCase()){
+      return this.guessed = true;
     };
   };
 
 var testLetter = new Letter("W");
 
 // testLetter.checkLetter("f");
-console.log(testLetter);
+// console.log(testLetter);
 // console.log(this);
-console.log(testLetter.guessed);
-console.log(testLetter.isGuessedCheck());
-console.log(testLetter.checkLetter("f", testLetter));
+// console.log(testLetter.guessed);
+// console.log(testLetter.isGuessedCheck());
+// console.log(testLetter.checkLetter("f", testLetter));
 // console.log(this.guessed);
 module.exports = Letter;
