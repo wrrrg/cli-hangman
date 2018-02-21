@@ -38,7 +38,11 @@ Word.prototype.userGuess = function(input){
     // console.log(arr[i].char);
     // console.log(arr[i].guessed);
 
-    arr[i].checkLetter(char);
+    if(arr[i].checkLetter(char)){
+      return true;
+    } else {
+      return false;
+    };
   };
  };
 };
@@ -48,13 +52,13 @@ Word.prototype.userGuess = function(input){
 
 // };
 
-var testWord = new Word("neat");
-// console.log(testWord.wordArr);
-console.log(testWord.makeString());
-testWord.userGuess("t");
-console.log(testWord.makeString());
-console.log(testWord.guessedLetters);
-testWord.userGuess("t");
-console.log(testWord.guessedLetters);
+// var testWord = new Word("neat");
+// // console.log(testWord.wordArr);
+// console.log(testWord.makeString());
+// testWord.userGuess("t");
+// console.log(testWord.makeString());
+// console.log(testWord.guessedLetters);
+// testWord.userGuess("t");
+// console.log(testWord.guessedLetters);
 
 module.exports = Word;

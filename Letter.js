@@ -21,7 +21,10 @@ var Letter = function(char){
 
   Letter.prototype.checkLetter = function(input){
     if(input.toUpperCase() === this.char.toUpperCase()){
-      return this.guessed = true;
+      this.guessed = true;
+      return true
+    } else {
+      return false
     };
   };
 
