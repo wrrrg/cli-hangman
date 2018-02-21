@@ -31,7 +31,6 @@ var stillPlaying = true;
 function startGame(){
   //first, start a new game
   resetGame();
-
 };
 
 function guessLoop(){
@@ -80,6 +79,7 @@ function checkVictory(){
 
   if(correctGuesses === currentWord.wordArr.length){
     victory = true;
+    winCount ++;
     console.log("You got the word!");
     resetGame();
   };
@@ -97,11 +97,9 @@ function resetGame(){
       console.log("Thanks anyway! Have a good day.");
       return stillPlaying = false;
     } else {
-      console.log("Neat!");
       currentWord = new Word(randomWords());
-      console.log(currentWord);
       remainingGuesses = 7;
-      console.log("Thanks for starting a new game of hangman! Best of luck.");
+      console.log("Neat! Thanks for starting a new game of hangman! Best of luck.");
       console.log("You've accrued " + winCount + " wins and " + lossCount + " losses so far.");
       console.log("You have " + remainingGuesses + " guesses left.");
       console.log(currentWord.makeString());

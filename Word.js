@@ -29,6 +29,7 @@ Word.prototype.makeString = function(){
 Word.prototype.userGuess = function(input){
   var arr = this.wordArr;
   var char = input;
+  var correct = false;
 // first check if they guessed already
   if (this.guessedLetters.indexOf(char) > -1){
     console.log("You already guessed that letter!");
@@ -37,13 +38,14 @@ Word.prototype.userGuess = function(input){
   for (var i = 0; i < arr.length; i++) {
     // console.log(arr[i].char);
     // console.log(arr[i].guessed);
-
+    arr[i].checkLetter(char);
     if(arr[i].checkLetter(char)){
-      return true;
-    } else {
-      return false;
-    };
+      correct = true;
+    }
   };
+
+  return correct;
+
  };
 };
 
